@@ -12,7 +12,7 @@ WORKDIR /src
 COPY ["./eshop-microservices/Services/Catalog/Catalog.Api/Catalog.Api.csproj", "./eshop-microservices/Services/Catalog/Catalog.Api/"]
 RUN dotnet restore "./eshop-microservices/Services/Catalog/Catalog.Api/Catalog.Api.csproj"
 COPY . .
-WORKDIR "/src/Services/Catalog/Catalog.Api"
+WORKDIR "/src/eshop-microservices/Services/Catalog/Catalog.Api"
 RUN dotnet build "./Catalog.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
