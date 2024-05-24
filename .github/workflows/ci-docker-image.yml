@@ -45,6 +45,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./eshop-microservices/Services/CatalogCatalog.API/Dockerfile
+          file: ./eshop-microservices/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/dockerfordotnetapi:latest, ${{ secrets.DOCKERHUB_USERNAME }}/dockerfordotnetapi:${{ github.run_number }}
